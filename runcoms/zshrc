@@ -47,7 +47,7 @@ export PATH="$PATH:~/anaconda/bin"
 
 # aaa
 # add ant scripts
-export PATH="$PATH:~/devel/ant/shell/scripts"
+export PATH="$PATH:/Users/antonioforgione1/devel/ant/shell/scripts"
 
 # aaa
 # disable auto correction
