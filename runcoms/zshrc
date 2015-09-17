@@ -52,3 +52,7 @@ export PATH="$PATH:/Users/AntonioF/devel/ant/shell/scripts"
 # aaa
 # disable zsh auto correction
 unsetopt correct
+
+# aaa
+# add zsh alias
+alias t="timetip"
