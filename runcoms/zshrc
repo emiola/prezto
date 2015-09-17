@@ -58,4 +58,6 @@ unsetopt correct
 alias t="timetip"
 
 # aaa github token for brew
-export HOMEBREW_GITHUB_API_TOKEN="c1b967422ceb9d80825209bb0bda8376a696920b"
+filename="$HOME/.secrets/homebrew_github_token"
+[[ -e $filename ]] && export HOMEBREW_GITHUB_API_TOKEN=$(cat $filename)
+
