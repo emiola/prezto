@@ -50,5 +50,5 @@ export PATH="/Users/AntonioF/anaconda/bin:$PATH"
 export PATH="$PATH:/Users/AntonioF/devel/ant/shell/scripts"
 
 # aaa
-# disable auto correction
+# disable zsh auto correction
 unsetopt correct
