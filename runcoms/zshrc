@@ -55,7 +55,7 @@ unsetopt correct
 alias t="timetip"
 
 alias alex='cd ~/devel/alexandria/code'
-alias alexb='cd ~/devel/alexandria/code/backend'
+alias alexb='cd ~/devel/alexandria/code/backend && source activate alex-backend'
 alias alexc='cd ~/devel/alexandria/code/container'
 alias alexf='cd ~/devel/alexandria/code/frontend'
 
