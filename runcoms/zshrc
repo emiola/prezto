@@ -42,9 +42,6 @@ fi
 # aaa
 # ported from bash_profile
 
-# added by Anaconda 2.1.0 installer
-export PATH="/Users/AntonioF/anaconda/bin:$PATH"
-
 # aaa
 # add ant scripts
 export PATH="$PATH:/Users/AntonioF/devel/ant/shell/scripts"
@@ -57,7 +54,55 @@ unsetopt correct
 # add zsh alias
 alias t="timetip"
 
+alias alex='cd ~/devel/alexandria/code'
+alias alexb='cd ~/devel/alexandria/code/backend'
+alias alexc='cd ~/devel/alexandria/code/container'
+alias alexf='cd ~/devel/alexandria/code/frontend'
+
 # aaa github token for brew
 filename="$HOME/.secrets/homebrew_github_token"
 [[ -e $filename ]] && export HOMEBREW_GITHUB_API_TOKEN=$(cat $filename)
 
+# aaa
+# to use basictex
+export PATH="$PATH":/usr/texbin
+
+# aaa
+# to use qt5 from command line
+# export QTDIR=/Users/AntonioF/Qt/5.7.0/5.7/clang_64/bin
+# export QMAKESPEC=/Users/AntonioF/Qt/5.7.0/5.7/clang_64/mkspecs/macx-clang
+export PATH="$PATH":/Users/AntonioF/Qt/5.7.0/5.7/clang_64/bin
+
+# added by Anaconda 2.1.0 installer
+export PATH="$PATH:/Users/AntonioF/anaconda/bin"
+
+# added by Miniconda3 3.18.8 installer
+export PATH="$PATH:/Users/AntonioF/miniconda3/bin"
+
+# add by iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# aaa, addded to solve issues with openssl linking
+#export DYLD_LIBRARY_PATH="/usr/local/opt/openssl/lib"
+
+# add atom alias to use https://github.com/sindresorhus/tmpin
+alias pipeatom='tmpin atom'
+
+# aaa integration for conda-workon
+# Show the conda environment, calculate __fish_prompt_conda only once
+# if set -q CONDA_DEFAULT_ENV
+#     if not set -q __fish_prompt_conda
+#         set -g __fish_prompt_conda (set_color --bold -b blue red)$CONDA_DEFAULT_ENV"$__fish_prompt_normal "
+#     end
+#     echo -n $__fish_prompt_conda
+# end
+
+# if CONDA_DEFAULT_ENV not in PS1, prepend it with parentheses
+# if set -q CONDA_DEFAULT_ENV
+if ((${CONDA_DEFAULT_ENV})); then
+  echo "ok"
+# if [ $("$_CONDA_DIR/conda" ..changeps1) = "1" ]; then
+    # if ! $(grep -q CONDA_DEFAULT_ENV <<<$PS1); then
+        export PS1="(${CONDA_DEFAULT_ENV}) $PS1"
+    # fi
+fi
